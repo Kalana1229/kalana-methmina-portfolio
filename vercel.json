@@ -3,11 +3,6 @@
   "devCommand": "npm run dev",
   "installCommand": "npm install",
   "framework": "nextjs",
-  "env": {
-    "NEXT_PUBLIC_GITHUB_USERNAME": "@NEXT_PUBLIC_GITHUB_USERNAME",
-    "GITHUB_TOKEN": "@GITHUB_TOKEN",
-    "NEXT_PUBLIC_CONTACT_EMAIL": "@NEXT_PUBLIC_CONTACT_EMAIL"
-  },
   "headers": [
     {
       "source": "/(.*)",
