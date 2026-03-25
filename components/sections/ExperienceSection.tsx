@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Section, Container, Badge } from '@/components/ui';
-import { EXPERIENCE, EDUCATION } from '@/lib/data/portfolio';
+import { EXPERIENCE, EDUCATION, CERTIFICATIONS } from '@/lib/data/portfolio';
 import { formatDate, calculateDuration } from '@/lib/utils';
 import { FiBriefcase, FiBookOpen } from 'react-icons/fi';
 
@@ -25,6 +25,30 @@ export const ExperienceSection: React.FC = () => {
       y: 0,
       transition: { duration: 0.5 },
     },
+  };
+
+  // Calculate total experience duration in years
+  const calculateTotalExperience = () => {
+    const totalMonths = EXPERIENCE.reduce((total, exp) => {
+      const start = new Date(exp.startDate);
+      const end = exp.endDate ? new Date(exp.endDate) : new Date();
+      const diffMs = end.getTime() - start.getTime();
+      const months = Math.floor(diffMs / (1000 * 60 * 60 * 24 * 30));
+      return total + months;
+    }, 0);
+
+    const years = Math.floor(totalMonths / 12);
+    const months = totalMonths % 12;
+
+    if (years === 0) {
+      return `${months}m`;
+    }
+
+    if (months === 0) {
+      return `${years}y`;
+    }
+
+    return `${years}y ${months}m`;
   };
 
   return (
@@ -156,7 +180,7 @@ export const ExperienceSection: React.FC = () => {
             {[
               {
                 label: 'Years Experience',
-                value: `${EXPERIENCE.length}+`,
+                value: calculateTotalExperience(),
               },
               {
                 label: 'Companies',
@@ -164,7 +188,7 @@ export const ExperienceSection: React.FC = () => {
               },
               {
                 label: 'Certifications',
-                value: EDUCATION.length,
+                value: CERTIFICATIONS.length,
               },
             ].map((stat, index) => (
               <motion.div

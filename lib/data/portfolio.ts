@@ -146,9 +146,8 @@ export const EXPERIENCE: Experience[] = [
     id: '1',
     company: 'CloudBuzz',
     position: 'Software Engineer Intern',
-    startDate: '2025-05-01',
-    endDate: '2025-11-01',
-    current: false,
+    startDate: '2025-06-01',
+    current: true,
     description:
       'Developed and maintained real-world web applications using PHP CodeIgniter 3, contributing to scalable and maintainable system architecture. Designed and implemented key features including CRUD operations, user authentication, and data management systems. Integrated responsive front-end components using HTML, CSS, JavaScript, and Bootstrap, ensuring a smooth user experience across devices. Collaborated effectively with team members to deliver project modules on time and according to requirements. Improved application performance through code optimization and efficient database queries. Followed best practices in clean code, debugging, and version control (Git). Gained hands-on experience in full-stack development and real-world project workflows.',
     technologies: ['PHP', 'CodeIgniter 3', 'MySQL', 'HTML', 'CSS', 'JavaScript', 'Bootstrap', 'Git'],
@@ -180,6 +179,17 @@ export const EDUCATION: Education[] = [
     field: 'General Education',
     startDate: '2017-01-01',
     endDate: '2017-12-01',
+  },
+];
+
+export const CERTIFICATIONS = [
+  {
+    id: '1',
+    title: 'Google Cloud Certified - Associate Cloud Engineer',
+    issuer: 'Google Cloud',
+    date: '2025-02-01',
+    credentialId: 'GCP-123456',
+    link: 'https://www.credential.net/GCP-123456',
   },
 ];
 
