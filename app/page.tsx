@@ -55,7 +55,7 @@ function HomeContent() {
   };
 
   return (
-    <main className="relative overflow-hidden">
+    <main className="relative overflow-x-hidden">
       {/* Navigation */}
       <Navbar />
 
