@@ -147,6 +147,7 @@ export const EXPERIENCE: Experience[] = [
     company: 'CloudBuzz',
     position: 'Software Engineer Intern',
     startDate: '2025-06-01',
+    endDate: null,
     current: true,
     description:
       'Developed and maintained real-world web applications using PHP CodeIgniter 3, contributing to scalable and maintainable system architecture. Designed and implemented key features including CRUD operations, user authentication, and data management systems. Integrated responsive front-end components using HTML, CSS, JavaScript, and Bootstrap, ensuring a smooth user experience across devices. Collaborated effectively with team members to deliver project modules on time and according to requirements. Improved application performance through code optimization and efficient database queries. Followed best practices in clean code, debugging, and version control (Git). Gained hands-on experience in full-stack development and real-world project workflows.',

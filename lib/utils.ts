@@ -9,7 +9,7 @@ export const cn = (...classes: (string | undefined | null | boolean)[]): string 
 /**
  * Debounce function to limit function calls
  */
-export const debounce = <T extends (...args: any[]) => any>(
+export const debounce = <T extends (...args: unknown[]) => unknown>(
   func: T,
   delay: number
 ): ((...args: Parameters<T>) => void) => {
@@ -23,11 +23,11 @@ export const debounce = <T extends (...args: any[]) => any>(
 /**
  * Throttle function to limit function calls
  */
-export const throttle = <T extends (...args: any[]) => any>(
+export const throttle = <T extends (...args: unknown[]) => unknown>(
   func: T,
   limit: number
 ): ((...args: Parameters<T>) => void) => {
-  let inThrottle: boolean;
+  let inThrottle = false;
   return (...args: Parameters<T>) => {
     if (!inThrottle) {
       func(...args);

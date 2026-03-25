@@ -6,6 +6,18 @@
 import axios from 'axios';
 import { GitHubRepository } from '@/lib/types';
 
+type GitHubRepoResponse = {
+  id: number;
+  name: string;
+  description: string | null;
+  html_url: string;
+  homepage: string | null;
+  language: string | null;
+  stargazers_count: number;
+  forks_count: number;
+  topics?: string[];
+};
+
 const GITHUB_API = 'https://api.github.com';
 const GITHUB_USERNAME = process.env.NEXT_PUBLIC_GITHUB_USERNAME || 'yourusername';
 
@@ -33,7 +45,7 @@ export class GitHubService {
         }
       );
 
-      return response.data.map((repo: any) => ({
+      return response.data.map((repo: GitHubRepoResponse) => ({
         id: repo.id,
         name: repo.name,
         description: repo.description,
