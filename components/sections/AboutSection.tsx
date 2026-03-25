@@ -44,7 +44,7 @@ export const AboutSection: React.FC = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.1 }}
           className="space-y-16"
         >
           {/* Section Header */}
