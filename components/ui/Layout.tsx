@@ -43,7 +43,7 @@ export const Section = React.forwardRef<HTMLDivElement, SectionProps>(
     <section
       ref={ref}
       id={id}
-      className={cn(!noGutter && 'py-20 md:py-32', className)}
+      className={cn(!noGutter && 'py-20 md:py-32', 'scroll-mt-24', className)}
       {...props}
     >
       {children}

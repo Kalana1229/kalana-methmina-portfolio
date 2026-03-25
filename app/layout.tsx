@@ -88,7 +88,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
       </head>
-      <body className={`${inter.className} bg-slate-900 text-text-primary`}>
+      <body className={`${inter.className}`}>
         <ThemeProvider>
           {children}
         </ThemeProvider>
